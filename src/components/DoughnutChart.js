@@ -14,7 +14,7 @@ export default function DoughnutChart({ title, value }) {
         backgroundColor: ["#5FD47D", "#4C82F7", "#FF4D8D", "#EDF1F5"],
         borderWidth: 3,
         borderColor: "#fff",
-        cutout: "76%",
+        cutout: "70%",
       },
     ],
   };
@@ -29,7 +29,7 @@ export default function DoughnutChart({ title, value }) {
   };
 
   return (
-    <div className="relative w-35 h-35 mx-auto">
+    <div className="relative w-50 h-46 mt-6 mx-auto">
       <Doughnut data={data} options={options} />
 
       <div className="absolute inset-0 flex flex-col items-center justify-center">

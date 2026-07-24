@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function SideBar() {
   return (
-    <aside className="w-50 h-screen bg-white flex flex-col items-center py-8 shadow-md">
+    <aside className="w-50  bg-white flex flex-col items-center py-8 shadow-md">
       <Image src="/images/logo.png" alt="logo" width={120} height={120} />
       <div className="mt-4">
         <Image
@@ -38,7 +38,7 @@ export default function SideBar() {
         >
           <Lightbulb color="#6B7280" size={14} />
           <span className="text-[13px] text-gray-500">User Interface</span>
-          <ChevronRight color="#6B7280" size={12} className="ml-10" />
+          <ChevronRight color="#6B7280" size={12} className="ml-9.5" />
         </Link>
         <Link
           href="/advancedui"
@@ -62,7 +62,7 @@ export default function SideBar() {
         >
           <ChartPie color="#6B7280" size={14} />
           <span className="text-[13px] text-gray-500">Charts</span>
-          <ChevronRight color="#6B7280" size={12} className="ml-20" />
+          <ChevronRight color="#6B7280" size={12} className="ml-20.5" />
         </Link>
         <Link
           href="/table"
@@ -70,7 +70,7 @@ export default function SideBar() {
         >
           <Table2 color="#6B7280" size={14} />
           <span className="text-[13px] text-gray-500">Tables</span>
-          <ChevronRight color="#6B7280" size={12} className="ml-20" />
+          <ChevronRight color="#6B7280" size={12} className="ml-20.5" />
         </Link>
         <p className="text-[14px] text-gray-500  mt-3">Extra</p>
         <Link
@@ -95,7 +95,7 @@ export default function SideBar() {
         >
           <Layers color="#6B7280" size={14} />
           <span className="text-[13px] text-gray-500">Pages</span>
-          <ChevronRight color="#6B7280" size={12} className="ml-20.5" />
+          <ChevronRight color="#6B7280" size={12} className="ml-21.5" />
         </Link>
       </div>
     </aside>
