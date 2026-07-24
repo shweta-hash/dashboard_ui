@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function LoginForm() {
   return (
     <div>
@@ -19,7 +21,7 @@ export default function LoginForm() {
             </div>
 
           <div className="pt-0 mt-6">
-            <button className="w-full bg-blue-400 text-white py-3 rounded-lg font-semibold transition duration-300 hover:bg-blue-600"> Login </button>
+            <Link href="/dashboard"> <button className="w-full bg-blue-400 text-white py-3 rounded-lg font-semibold transition duration-300 hover:bg-blue-600"> Login </button></Link>
           </div>
 
         </div>

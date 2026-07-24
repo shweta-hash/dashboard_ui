@@ -12,7 +12,7 @@ export default function Dashboard() {
     <div className="flex min-h-screen bg-gray-100">
       <SideBar />
 
-      <div className="flex-1">
+      <div className="flex-1 pl-50">
         <NavBar />
 
         <div className="p-6 space-y-6">

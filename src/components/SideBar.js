@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function SideBar() {
   return (
-    <aside className="w-50  bg-white flex flex-col items-center py-8 shadow-md">
+    <aside className="w-50 fixed left-0 top-0 h-screen bg-white flex flex-col items-center py-8 shadow-md">
       <Image src="/images/logo.png" alt="logo" width={120} height={120} />
       <div className="mt-4">
         <Image
