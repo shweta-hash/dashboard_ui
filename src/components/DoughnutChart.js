@@ -20,7 +20,6 @@ export default function DoughnutChart({ title, value }) {
   };
 
   const options = {
-    responsive: true,
     plugins: {
       legend: {
         display: false,

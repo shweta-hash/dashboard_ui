@@ -60,9 +60,6 @@ export default function AreaChart() {
   };
 
   const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-
     plugins: {
       legend: {
         display: false,
@@ -93,7 +90,7 @@ export default function AreaChart() {
   };
 
   return (
-    <div className="h-64 w-140">
+    <div className="h-64 w-full">
       <Line data={data} options={options} />
     </div>
   );

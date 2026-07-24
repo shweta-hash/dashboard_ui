@@ -75,7 +75,7 @@ export default function BarChart() {
   };
 
   return (
-    <div className="h-66 mt-3 w-140">
+    <div className="h-66 mt-3 w-full">
       <Bar data={data} options={options} />
     </div>
   );

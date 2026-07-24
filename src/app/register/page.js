@@ -14,7 +14,7 @@ export default function Register() {
             <p className="mt-4 text-gray-500 leading-7">
                 Register to access your dashboard and start managing your account.
             </p>
-            <div className="mt-10">
+            <div className="mt-3">
                 <RegisterForm/>
             </div>
 
