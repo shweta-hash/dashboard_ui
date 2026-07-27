@@ -15,45 +15,13 @@ export default function NavBar({onMenuClick}) {
       <div className="flex items-center gap-6 px-6">
         <div className="relative">
           <Mail size={20} className="text-white"></Mail>
-            <span
-                className="
-                absolute
-                -top-2
-                -right-2
-                h-4
-                w-4
-                rounded-full
-                bg-red-500
-                text-white
-                text-[10px]
-                flex
-                items-center
-                justify-center
-                font-semibold
-            "
-            >
+            <span className="absolute -top-2 -right-2 h-4 w-4 rounded-full bg-red-500 text-white text-[10px] flex items-center justify-center font-semibold">
                 5
             </span>
         </div>
         <div className="relative">
           <Bell size={20} className="text-white"></Bell>
-                <span
-                    className="
-                        absolute
-                        -top-2
-                        -right-2
-                        h-4
-                        w-4
-                        rounded-full
-                        bg-green-500
-                        text-white
-                        text-[10px]
-                        flex
-                        items-center
-                        justify-center
-                        font-semibold
-                    "
-                    >
+                <span className="absolute -top-2 -right-2 h-4 w-4 rounded-full bg-green-500 text-white text-[10px] flex items-center justify-center font-semibold">
                     3
                 </span>
         </div>
