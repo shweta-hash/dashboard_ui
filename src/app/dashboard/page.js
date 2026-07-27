@@ -1,3 +1,5 @@
+"use client";
+import {useState } from "react";
 import AreaChart from "@/components/AreaChart";
 import BarChart from "@/components/BarChart";
 import CandidateTable from "@/components/dashboard/CandidatesTable";
@@ -8,12 +10,13 @@ import EarningsCard from "@/components/EarningsCard";
 import SideBar from "@/components/SideBar";
 import { ShoppingCart, DollarSign, Box, Bitcoin } from "lucide-react";
 export default function Dashboard() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <div className="flex min-h-screen bg-gray-100">
-      <SideBar />
+      <SideBar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)}/>
 
-      <div className="flex-1 pl-50">
-        <NavBar />
+      <div className="flex-1 md:pl-50">
+        <NavBar onMenuClick={() => setSidebarOpen(true)}/>
 
         <div className="p-6 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">

@@ -93,7 +93,7 @@ export default function AreaChart() {
   };
 
   return (
-    <div className="h-64 w-140">
+    <div className="h-64 w-full min-w-0">
       <Line data={data} options={options} />
     </div>
   );

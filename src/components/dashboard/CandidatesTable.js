@@ -69,7 +69,7 @@ const candidates = [
 
 export default function CandidateTable({}) {
   return (
-    <Card className="shadow-sm rounded-lg w-210">
+    <Card className="shadow-sm rounded-lg">
       <CardHeader className="pb-0">
         <CardTitle className="text-lg font-semibold">Recent Candidates</CardTitle>
       </CardHeader>
