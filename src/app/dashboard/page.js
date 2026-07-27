@@ -11,12 +11,17 @@ import SideBar from "@/components/SideBar";
 import { ShoppingCart, DollarSign, Box, Bitcoin } from "lucide-react";
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [theme, setTheme] = useState("light");
   return (
-    <div className="flex min-h-screen bg-gray-100">
-      <SideBar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)}/>
+    <div className={`flex min-h-screen ${
+    theme === "light" ? "bg-gray-100" : "bg-gray-900"
+  }`}>
+      <SideBar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} theme={theme}/>
 
       <div className="flex-1 md:pl-50">
-        <NavBar onMenuClick={() => setSidebarOpen(true)}/>
+        <NavBar onMenuClick={() => setSidebarOpen(true)}
+        theme={theme}
+        setTheme={setTheme}/>
 
         <div className="p-6 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
@@ -26,14 +31,19 @@ export default function Dashboard() {
               value="15852"
               income="$22506"
               percentage="10.25%"
-              bgColor="bg-white"
-              textColor="text-red-400"
+              // bgColor="bg-white"
+              bgColor={`${theme==="light" ? "bg-white": "bg-gray-600"}`}
+              // textColor="text-red-400"
+              textColor= {`${theme==="light" ? "text-red-400": "text-gray-100"}`}
               cardWidth="w-full"
               cardHeight="h-40"
               iconBg="bg-gray-100"
-              titleTextColor="text-gray-500"
-              incomeTextColor="text-gray-500"
-              percentageTextColor="text-gray-500"
+              // titleTextColor="text-gray-500"
+              // incomeTextColor="text-gray-500"
+              // percentageTextColor="text-gray-500"
+              titleTextColor= {`${theme==="light" ? "text-gray-400": "text-gray-100"}`}
+              incomeTextColor= {`${theme==="light" ? "text-gray-400": "text-gray-100"}`}
+              percentageTextColor= {`${theme==="light" ? "text-gray-400": "text-gray-100"}`}
             />
 
             <StatsCard
@@ -42,7 +52,8 @@ export default function Dashboard() {
               value="956"
               income="$22506"
               percentage="10.25%"
-              bgColor="bg-green-400"
+              // bgColor="bg-green-400"
+              bgColor= {`${theme==="light" ? "bg-green-400": "bg-green-600"}`}
               textColor="text-white"
               cardWidth="w-full"
               cardHeight="h-40"
@@ -58,14 +69,14 @@ export default function Dashboard() {
               value="5210"
               income="$22506"
               percentage="10.25%"
-              bgColor="bg-white"
-              textColor="text-yellow-400"
+              bgColor={`${theme==="light" ? "bg-white": "bg-gray-600"}`}
+              textColor= {`${theme==="light" ? "text-yellow-400": "text-gray-100"}`}
               cardWidth="w-full"
               cardHeight="h-40"
               iconBg="bg-gray-100"
-              titleTextColor="text-gray-500"
-              incomeTextColor="text-gray-500"
-              percentageTextColor="text-gray-500"
+              titleTextColor= {`${theme==="light" ? "text-gray-400": "text-gray-100"}`}
+              incomeTextColor= {`${theme==="light" ? "text-gray-400": "text-gray-100"}`}
+              percentageTextColor= {`${theme==="light" ? "text-gray-400": "text-gray-100"}`}
             />
 
             <StatsCard
@@ -74,7 +85,8 @@ export default function Dashboard() {
               value="20544"
               income="$22506"
               percentage="10.25%"
-              bgColor="bg-cyan-600"
+              // bgColor="bg-cyan-600"
+              bgColor= {`${theme==="light" ? "bg-cyan-400": "bg-cyan-600"}`}
               textColor="text-white"
               cardWidth="w-full"
               cardHeight="h-40"
