@@ -67,34 +67,34 @@ const candidates = [
   },
 ];
 
-export default function CandidateTable({}) {
+export default function CandidateTable({theme}) {
   return (
-    <Card className="shadow-sm rounded-lg">
+    <Card className={`shadow-sm rounded-lg ${theme==="light" ? "bg-white": "bg-gray-700"}`}>
       <CardHeader className="pb-0">
-        <CardTitle className="text-lg font-semibold">Recent Candidates</CardTitle>
+        <CardTitle className={`text-lg font-semibold ${theme==="light" ? "text-black": "text-gray-200"}`}>Recent Candidates</CardTitle>
       </CardHeader>
       <CardContent className="py-0">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="font-semibold text-gray-700">Name</TableHead>
-              <TableHead className="font-semibold text-gray-700">Position</TableHead>
-              <TableHead className="font-semibold text-gray-700">Table</TableHead>
-              <TableHead className="font-semibold text-gray-700">Age</TableHead>
-              <TableHead className="font-semibold text-gray-700">Start Date</TableHead>
-              <TableHead className="font-semibold text-gray-700">Salary</TableHead>
+              <TableHead className={`font-semibold ${theme==="light" ? "text-gray-700": "text-gray-400"}`}>Name</TableHead>
+              <TableHead className={`font-semibold ${theme==="light" ? "text-gray-700": "text-gray-400"}`}>Position</TableHead>
+              <TableHead className={`font-semibold ${theme==="light" ? "text-gray-700": "text-gray-400"}`}>Table</TableHead>
+              <TableHead className={`font-semibold ${theme==="light" ? "text-gray-700": "text-gray-400"}`}>Age</TableHead>
+              <TableHead className={`font-semibold ${theme==="light" ? "text-gray-700": "text-gray-400"}`}>Start Date</TableHead>
+              <TableHead className={`font-semibold ${theme==="light" ? "text-gray-700": "text-gray-400"}`}>Salary</TableHead>
             </TableRow>
           </TableHeader>
 
           <TableBody>
             {candidates.map((candidate) => (
-              <TableRow className="hover:bg-gray-50" key={candidate.id}>
+              <TableRow className={`hover:${theme==="light" ? "bg-gray-50": "text-gray-400"}`} key={candidate.id}>
 
-                <TableCell className="font-medium">{candidate.name}</TableCell>
+                <TableCell className={`font-medium ${theme==="light" ? "text-gray-700": "text-gray-200"}`}>{candidate.name}</TableCell>
 
-                <TableCell className="font-medium">{candidate.position}</TableCell>
+                <TableCell className={`font-medium ${theme==="light" ? "text-gray-700": "text-gray-200"}`}>{candidate.position}</TableCell>
 
-                <TableCell className="font-medium">
+                <TableCell className={`font-medium ${theme==="light" ? "text-gray-700": "text-gray-200"}`}>
                   <Badge className={
                     candidate.status==="Active"
                     ? "bg-green-100 text-green-700 hover:bg-green-100" 
@@ -104,11 +104,11 @@ export default function CandidateTable({}) {
                   </Badge>
                 </TableCell>
 
-                <TableCell className="font-medium">{candidate.age}</TableCell>
+                <TableCell className={`font-medium ${theme==="light" ? "text-gray-700": "text-gray-200"}`}>{candidate.age}</TableCell>
 
-                <TableCell className="font-medium">{candidate.startDate}</TableCell>
+                <TableCell className={`font-medium ${theme==="light" ? "text-gray-700": "text-gray-200"}`}>{candidate.startDate}</TableCell>
 
-                <TableCell className="font-medium">{candidate.salary}</TableCell>
+                <TableCell className={`font-medium ${theme==="light" ? "text-gray-700": "text-gray-200"}`}>{candidate.salary}</TableCell>
 
               </TableRow>
             ))}
