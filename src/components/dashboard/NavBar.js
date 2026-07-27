@@ -1,8 +1,4 @@
-import { Mail } from "lucide-react";
-import { Bell } from "lucide-react";
-import { User } from "lucide-react";
-import { Menu } from "lucide-react";
-
+import { Mail, Bell, User, Menu  } from "lucide-react";
 export default function NavBar({onMenuClick}) {
   return (
     <nav className="bg-[#43495c] h-14 w-full flex items-center justify-between">
