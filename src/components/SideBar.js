@@ -26,27 +26,16 @@ export default function SideBar({ isOpen, onClose,theme }) {
         />
       )}
       <aside
-        className={`w-50 fixed left-0 top-0 h-screen ${theme==="light" ? "bg-white": "bg-gray-800"} flex flex-col items-center py-8 shadow-md z-50 transform transition-transform duration-200 md:translate-x-0 ${
+        className={`w-50 fixed left-0 top-0 h-screen ${theme==="light" ? "bg-white": "bg-gray-800"} flex flex-col pb-8 pt-3.5 shadow-md z-50 transform transition-transform duration-200 md:translate-x-0 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <Image src="/images/logo.png" alt="logo" width={120} height={120} />
-        <div className="mt-4">
-          <Image
-            src="/images/avtar2.webp"
-            alt="avatar"
-            width={60}
-            height={60}
-            className="rounded-full"
-          />
-        </div>
-        <h2 className="mt-4 text-ml font-bold text-gray-800">User 1</h2>
-        <button className="mt-2 flex items-center gap-1 rounded-full border border-gray-400 bg-white px-1.5 py-0.5">
-          <CircleDot size={10} color="#3f835c" />
-          <span className="text-[10px] text-gray-400">Online</span>
-        </button>
+        <Image src="/images/logo.png" alt="logo" width={140} height={140} className="pl-4" />
+       
         <div className="w-full text-left pl-6">
           <p className={`text-[14px] ${theme==="light" ? "text-gray-500" :"text-gray-200"} mt-3`}>Main</p>
+        <div className="w-full text-left pl-4 pt-6">
+          <p className="text-[14px] text-gray-500  mt-3">Main</p>
           <Link
             href="/"
             className="mt-2 flex items-center gap-1.5 rounded-full px-1.5 py-0.5 w-full"
@@ -120,6 +109,7 @@ export default function SideBar({ isOpen, onClose,theme }) {
             <span className={`text-[13px] ${theme==="light" ? "text-gray-500" :"text-gray-200"}`}>Pages</span>
             <ChevronRight size={12} className={`ml-14 ${ theme === "light" ? "text-gray-500" : "text-gray-200"}`}/>
           </Link>
+        </div>
         </div>
       </aside>
     </>
