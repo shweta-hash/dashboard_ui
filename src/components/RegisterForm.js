@@ -53,11 +53,11 @@ export default function RegisterForm() {
     }
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}  className="flex flex-col gap-5">
-        <div className="flex flex-col gap-3">
+    <div className="w-full">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 lg:gap-5">
+        <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium text-slate-700 px-4">
+            <label className="text-sm lg:text-base font-medium text-slate-700">
               Full Name
             </label>
             <input
@@ -66,7 +66,7 @@ export default function RegisterForm() {
               value={formData.fullName}
               onChange={handleChange}
               placeholder="Enter your full name"
-              className={`w-full rounded-lg border px-4 py-2.5 outline-none ${errors.fullName ? "border-red-500" : "" }`}
+              className={`w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm lg:text-base outline-none focus:border-purple-500 transition ${errors.fullName ? "border-red-500" : "" }`}
             />
 
             {errors.fullName && (
@@ -74,8 +74,8 @@ export default function RegisterForm() {
             )}
           </div>
 
-          <div className="flex flex-col gap-1.5">
-            <label className="text-sm font-medium text-slate-700 px-4">
+          <div className="flex flex-col gap-2">
+            <label className="text-sm lg:text-base font-medium text-slate-700">
               Email Address
             </label>
             <input
@@ -84,7 +84,7 @@ export default function RegisterForm() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
-              className={`w-full rounded-lg border px-4 py-2.5 outline-none ${errors.email ? "border-red-500" : ""}`}
+              className={`w-full rounded-lg border border-gray-300 px-4 py-3 text-sm lg:text-base outline-none focus:border-purple-500 transition ${errors.email ? "border-red-500" : ""}`}
             />
 
             {errors.email && (
@@ -92,8 +92,8 @@ export default function RegisterForm() {
             )}
           </div>
 
-          <div className="flex flex-col gap-1.5">
-            <label className="text-sm font-medium text-slate-700 px-4">
+          <div className="flex flex-col gap-2">
+            <label className="text-sm lg:text-base font-medium text-slate-700">
               Password
             </label>
             <input
@@ -102,7 +102,7 @@ export default function RegisterForm() {
               value={formData.password}
               onChange={handleChange}
               placeholder="Enter your password"
-              className={`w-full rounded-lg border px-4 py-2.5 outline-none ${errors.password ? "border-red-500" : ""}`}
+              className={`w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm lg:text-base outline-none focus:border-purple-500 transition ${errors.password ? "border-red-500" : ""}`}
             />
 
             {errors.password && (
@@ -110,8 +110,8 @@ export default function RegisterForm() {
             )}
           </div>
 
-          <div className="flex flex-col gap-1.5">
-            <label className="text-sm font-medium text-slate-700 px-4">
+          <div className="flex flex-col gap-2">
+            <label className="text-sm lg:text-base font-medium text-slate-700">
               Confirm Password
             </label>
             <input
@@ -120,7 +120,7 @@ export default function RegisterForm() {
               value={formData.confirmPassword}
               onChange={handleChange}
               placeholder="Re-type Password"
-              className={`w-full rounded-lg border px-4 py-2.5 outline-none ${errors.confirmPassword ? "border-red-400" : ""}`}
+              className={`w-full rounded-lg border  border-gray-300 px-4 py-3 text-sm lg:text-base outline-none focus:border-purple-500 transition ${errors.confirmPassword ? "border-red-400" : ""}`}
             />
 
             {errors.confirmPassword && (
@@ -128,17 +128,17 @@ export default function RegisterForm() {
             )}
           </div>
 
-          <div className="pt-0 mt-1">
+          <div className="mt-0 lg:mt-6">
                 <button className="w-full bg-purple-300 text-white py-3 rounded-lg font-semibold transition duration-300 hover:bg-purple-500">
                 Register
                 </button>
           </div>
 
-          <p className="text-center text-sm text-gray-500">
+          <p className="text-center text-xs sm:text-sm text-gray-500">
             Already have an account?
             <Link
               href="/login"
-              className="text-purple-500 font-semibold hover:underline"
+              className="ml-1 text-purple-500 font-semibold hover:underline"
             >
               Login here
             </Link>

@@ -1,11 +1,17 @@
 import { Mail } from "lucide-react";
 import { Bell } from "lucide-react";
 import { User } from "lucide-react";
+import { Menu } from "lucide-react";
 
-export default function NavBar({}) {
+export default function NavBar({onMenuClick}) {
   return (
     <nav className="bg-[#43495c] h-14 w-full flex items-center justify-between">
-      <div className="text-white text-lg font-semibold px-6">Dashboard</div>
+      <div className="flex">
+        <button onClick={onMenuClick} className="md:hidden ml-4">
+        <Menu size={22} color="#6B7280" />
+      </button>
+      <div className="text-white text-lg font-semibold px-3">Dashboard</div>
+      </div>
       <div className="flex items-center gap-6 px-6">
         <div className="relative">
           <Mail size={20} className="text-white"></Mail>

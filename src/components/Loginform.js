@@ -40,45 +40,43 @@ export default function LoginForm() {
     }
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+    <div className="w-full">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 lg:gap-5">
         <div className="flex flex-col gap-5">
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium text-slate-700 px-4">
-              Email Address
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              className={`w-full rounded-lg border px-4 py-2.5 outline-none ${errors.email ? "border-red-500" : ""}`}
-            />
+          
+            <div className="flex flex-col gap-2">
+                <label className="text-sm lg:text-base font-medium text-slate-700 px-4">
+                    Email Address
+                </label>
+                    <input type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Enter your email"
+                      className={`w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm lg:text-base outline-none focus:border-blue-500 transition ${errors.email ? "border-red-500" : ""}`}
+                    />
 
-            {errors.email && (
+                    {errors.email && (
               <p className="text-red-500 text-sm"> {errors.email}</p>
             )}
-          </div>
+            </div>
 
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium text-slate-700 px-4">
-              Password
-            </label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
+            <div className="flex flex-col gap-2">
+                <label className="text-sm lg:text-base font-medium text-slate-700">
+                    Password
+                </label>
+                    <input
+                      type="password"
+                      name="password"
+                      value={formData.password}
+                      onChange={handleChange}
               placeholder="Enter your password"
-              className={`w-full rounded-lg border px-4 py-2.5 outline-none ${errors.password ? "border-red-500" : ""}`}
-            />
-
-            {errors.password && (
+              className={`w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm lg:text-base outline-none focus:border-blue-500 transition ${errors.password ? " border-red-500" : ""}`}
+                    />
+                    {errors.password && (
               <p className="text-red-500 text-sm">{errors.password}</p>
             )}
-          </div>
-
+            </div>
           <div className="pt-0 mt-3">
             <button
               type="submit"
