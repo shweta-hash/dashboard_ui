@@ -32,10 +32,8 @@ export default function SideBar({ isOpen, onClose,theme }) {
       >
         <Image src="/images/logo.png" alt="logo" width={140} height={140} className="pl-4" />
        
-        <div className="w-full text-left pl-6">
-          <p className={`text-[14px] ${theme==="light" ? "text-gray-500" :"text-gray-200"} mt-3`}>Main</p>
         <div className="w-full text-left pl-4 pt-6">
-          <p className="text-[14px] text-gray-500  mt-3">Main</p>
+          <p className={`text-[14px] ${theme==="light" ? "text-gray-500" :"text-gray-200"} mt-3`}>Main</p>
           <Link
             href="/"
             className="mt-2 flex items-center gap-1.5 rounded-full px-1.5 py-0.5 w-full"
@@ -109,7 +107,6 @@ export default function SideBar({ isOpen, onClose,theme }) {
             <span className={`text-[13px] ${theme==="light" ? "text-gray-500" :"text-gray-200"}`}>Pages</span>
             <ChevronRight size={12} className={`ml-14 ${ theme === "light" ? "text-gray-500" : "text-gray-200"}`}/>
           </Link>
-        </div>
         </div>
       </aside>
     </>
