@@ -57,7 +57,7 @@ export default function RegisterForm() {
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 lg:gap-5">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label className="text-sm lg:text-base font-medium text-slate-700">
+            <label className="text-sm lg:text-base mt-0 pt-0 font-medium text-slate-700">
               Full Name
             </label>
             <input
@@ -84,7 +84,7 @@ export default function RegisterForm() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
-              className={`w-full rounded-lg border border-gray-300 px-4 py-3 text-sm lg:text-base outline-none focus:border-purple-500 transition ${errors.email ? "border-red-500" : ""}`}
+              className={`w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm lg:text-base outline-none focus:border-purple-500 transition ${errors.email ? "border-red-500" : ""}`}
             />
 
             {errors.email && (
@@ -128,7 +128,7 @@ export default function RegisterForm() {
             )}
           </div>
 
-          <div className="mt-0 lg:mt-6">
+          <div className="mt-0 lg:mt-4">
                 <button className="w-full bg-purple-300 text-white py-3 rounded-lg font-semibold transition duration-300 hover:bg-purple-500">
                 Register
                 </button>
