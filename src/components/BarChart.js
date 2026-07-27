@@ -68,7 +68,7 @@ export default function BarChart() {
         },
 
         grid: {
-          color: "#f1f1f1",
+          
         },
       },
     },
