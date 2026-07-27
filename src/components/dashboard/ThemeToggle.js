@@ -15,7 +15,7 @@ export default function ThemeToggle({
         );
     };
     return(
-        <button onClick={toggleTheme} className="p-2 rounded-full bg-gray-200 transition duration-300">
+        <button onClick={toggleTheme} className="p-2 rounded-full bg-gray-200 transition duration-300 cursor-pointer">
             {
                 theme==="light"
                 ?
